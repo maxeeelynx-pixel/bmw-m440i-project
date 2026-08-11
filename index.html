@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW M440i G23 Project</title>
+    <!-- Подключаем шрифты для дорогого вида -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="navbar">
+        <div class="logo">M440i <span>Project</span></div>
+        <nav>
+            <a href="#specs">Характеристики</a>
+            <a href="#wheels">Колеса BBS</a>
+            <a href="#stage">Stage 2</a>
+        </nav>
+    </header>
+
+    <!-- Главный экран (Hero Section) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="title">BMW M440i <span class="highlight">xDrive</span></h1>
+            <p class="subtitle">Кабриолет мечты. Мотор B58. Глубокий малиновый кастом.</p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary" id="btn-start">Завести мотор</a>
+                <a href="#" class="btn btn-secondary">В конфигуратор</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подключаем JavaScript прямо внизу страницы -->
+    <script>
+        // Простой интерактив: кнопка реагирует на клик
+        const startBtn = document.getElementById('btn-start');
+        startBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Рев мотора B58! Stage 2 активирован, 500 л.с. готовы к старту! 🏎️💨');
+        });
+    </script>
+</body>
+</html>
