@@ -1,122 +1,56 @@
-/* Обнуляем стандартные отступы браузера */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+/* Стили для нового блока с характеристиками */
+.specs-section {
+    padding: 100px 10%;
+    background-color: #0f1013;
+    text-align: center;
 }
 
-body {
-    background-color: #0b0b0d; /* Глубокий темный фон */
-    color: #ffffff;
-    overflow-x: hidden;
-}
-
-/* Стили для шапки сайта */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 10%;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-}
-
-.logo {
-    font-size: 24px;
+.section-title {
+    font-size: 36px;
     font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.logo span {
-    color: #bc022e; /* Малиновый акцент */
-}
-
-nav a {
-    color: #a0a0a5;
-    text-decoration: none;
-    margin-left: 30px;
-    font-weight: 700;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #ffffff;
-}
-
-/* Стили для Главного Экрана */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    background: linear-gradient(to right, rgba(11, 11, 13, 0.9) 30%, rgba(11, 11, 13, 0.3)), 
-                url('https://unsplash.com') no-repeat center center/cover;
-    /* Картинка машины на фоне */
-}
-
-.hero-content {
-    max-width: 600px;
-}
-
-.title {
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     letter-spacing: -1px;
 }
 
-/* Малиновый неоновый текст */
-.highlight {
-    color: #bc022e;
-    text-shadow: 0 0 20px rgba(188, 2, 46, 0.6);
+.specs-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.subtitle {
-    font-size: 18px;
-    color: #c8c8cc;
-    margin-bottom: 40px;
+.spec-card {
+    background-color: #16171c;
+    padding: 40px 30px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid #22242a;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+}
+
+.spec-card:hover {
+    transform: translateY(-10px);
+    border-color: #bc022e; /* Малиновое свечение при наведении */
+}
+
+.spec-card h3 {
+    font-size: 28px;
+    color: #bc022e;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.spec-card p {
+    color: #a0a0a5;
+    font-size: 15px;
     line-height: 1.6;
 }
 
-/* Стили кнопок */
-.btn-group {
-    display: flex;
-    gap: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 16px 35px;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background-color: #bc022e;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(188, 2, 46, 0.4);
-}
-
-.btn-primary:hover {
-    background-color: #e6033a;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(188, 2, 46, 0.6);
-}
-
-.btn-secondary {
-    border: 2px solid #ffffff;
-    color: #ffffff;
-}
-
-.btn-secondary:hover {
-    background-color: #ffffff;
-    color: #0b0b0d;
-    transform: translateY(-3px);
+/* Сброс стандартных стилей кнопок */
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
 }
