@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMW M440i G23 Project</title>
-    <!-- Подключаем шрифты для дорогого вида -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,25 +19,49 @@
         </nav>
     </header>
 
-    <!-- Главный экран (Hero Section) -->
+    <!-- Главный экран -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="title">BMW M440i <span class="highlight">xDrive</span></h1>
             <p class="subtitle">Кабриолет мечты. Мотор B58. Глубокий малиновый кастом.</p>
             <div class="btn-group">
-                <a href="#" class="btn btn-primary" id="btn-start">Завести мотор</a>
-                <a href="#" class="btn btn-secondary">В конфигуратор</a>
+                <!-- Кнопки без тега ссылки, чтобы сайт не перезагружался вечно -->
+                <button class="btn btn-primary" id="btn-start">Завести мотор</button>
+                <button class="btn btn-secondary" id="btn-scroll">Характеристики</button>
             </div>
         </div>
     </section>
 
-    <!-- Подключаем JavaScript прямо внизу страницы -->
+    <!-- Новый блок: Характеристики Stage 2 -->
+    <section class="specs-section" id="specs">
+        <h2 class="section-title">Технические спецификации проекта</h2>
+        <div class="specs-grid">
+            <div class="spec-card">
+                <h3>~500 л.с.</h3>
+                <p>Мощность после чип-тюнинга Stage 2, разблокировки блока управления и установки даунпайпа.</p>
+            </div>
+            <div class="spec-card">
+                <h3>xHP Stage 3</h3>
+                <p>Прошивка автомата, чтобы коробка передач не буксовала при высоком крутящем моменте.</p>
+            </div>
+            <div class="spec-card">
+                <h3>B58 Двигатель</h3>
+                <p>Легендарный рядный 6-цилиндровый мотор с огромным потенциалом для тюнинга.</p>
+            </div>
+        </div>
+    </section>
+
     <script>
-        // Простой интерактив: кнопка реагирует на клик
+        // Скрипт запуска мотора
         const startBtn = document.getElementById('btn-start');
-        startBtn.addEventListener('click', function(e) {
-            e.preventDefault();
+        startBtn.addEventListener('click', function() {
             alert('Рев мотора B58! Stage 2 активирован, 500 л.с. готовы к старту! 🏎️💨');
+        });
+
+        // Скрипт для плавной прокрутки вниз к характеристикам
+        const scrollBtn = document.getElementById('btn-scroll');
+        scrollBtn.addEventListener('click', function() {
+            document.getElementById('specs').scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 </body>
